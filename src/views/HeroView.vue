@@ -9,7 +9,7 @@
         </div>
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
-            <h1 class="title-big">Everything You Love About Coffee</h1>
+            <header-title title="Everything You Love About Coffee" />
             <img
               class="beanslogo"
               src="@/assets/logo/Beans_logo.svg"
@@ -59,9 +59,24 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="best__wrapper">
-              <product-card />
-              <product-card />
-              <product-card />
+              <product-card
+                classItem="best__item"
+                :name="bestsellers[0].name"
+                :price="bestsellers[0].price"
+                :image="bestsellers[0].image"
+              />
+              <product-card
+                classItem="best__item"
+                :name="bestsellers[1].name"
+                :price="bestsellers[1].price"
+                :image="bestsellers[1].image"
+              />
+              <product-card
+                classItem="best__item"
+                :name="bestsellers[2].name"
+                :price="bestsellers[2].price"
+                :image="bestsellers[2].image"
+              />
             </div>
           </div>
         </div>
@@ -73,29 +88,30 @@
 <script>
 import NavBarComponent from "@/components/NavBarComponent.vue";
 import ProductCard from "@/components/ProductCard.vue";
+import HeaderTitle from "@/components/HeaderTitle.vue";
 
 export default {
-  components: { NavBarComponent, ProductCard },
+  components: { NavBarComponent, ProductCard, HeaderTitle },
   data() {
     return {
-      productCards: [
+      bestsellers: [
         {
           id: 0,
           image: "coffee-1.jpg",
-          text: "Solimo Coffee Beans 2kg",
-          price: "10.73$",
+          name: "Solimo Coffee Beans 2kg",
+          price: 10.73,
         },
         {
           id: 1,
           image: "coffee-2.jpg",
-          text: "Presto Coffee Beans 1kg",
-          price: "15.99$",
+          name: "Presto Coffee Beans 1kg",
+          price: 15.99,
         },
         {
           id: 2,
           image: "coffee-3.jpg",
-          text: "AROMISTICO Coffee 1kg",
-          price: "6.99$",
+          name: "AROMISTICO Coffee 1kg",
+          price: 6.99,
         },
       ],
     };
