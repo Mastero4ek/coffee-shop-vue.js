@@ -1,6 +1,6 @@
 <template>
   <li :class="classLink">
-    <router-link :to="link">{{ text }}</router-link>
+    <router-link :to="link">{{ text }}<slot></slot></router-link>
   </li>
 </template>
 
@@ -13,11 +13,11 @@ export default {
     },
     text: {
       type: String,
-      required: true,
+      required: false,
     },
     classLink: {
       type: String,
-      required: false,
+      required: true,
     },
   },
 };
