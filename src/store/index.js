@@ -4,7 +4,7 @@ import Vuex from 'vuex'
 import links from './links'
 import bestsellers from './bestsellers'
 import goods from './goods'
-import coffees from './coffees'
+import coffee from './coffee'
 
 Vue.use(Vuex)
 
@@ -13,7 +13,7 @@ const store = new Vuex.Store({
         links,
         bestsellers,
         goods,
-        coffees
+        coffee
     }
 })
 

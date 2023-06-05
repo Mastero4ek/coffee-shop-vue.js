@@ -69,9 +69,7 @@
                 classItem="best__item"
                 v-for="best in bestsellers"
                 :key="best.id"
-                :name="best.name"
-                :price="best.price"
-                :image="best.image"
+                :card="best"
               />
             </div>
           </div>
